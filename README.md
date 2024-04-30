@@ -2,8 +2,15 @@
 
 ## Vagrant
 
+* Plugin vbguest
+
+```sh
+vagrant plugin install vagrant-vbquest
+```
+
 
 * Criar vagrant file
+
 ```sh
 vagrant init
 ```

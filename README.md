@@ -1,12 +1,34 @@
 # DevOps
 
+## Ansible
+
+#### Pre-req
+
+#### Install and Setup
+
+#### Commands
+
+#### References
+
+- https://www.ansible.com/
+
 ## Vagrant
 
-### Pre-req
+#### Pre-req
+
+* VirtualBox
 
 - https://www.virtualbox.org/
 
-### Install and Setup
+* NFS Mount on Ubuntu
+
+- https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-22-04
+
+```sh
+sudo apt install nfs-kernel-server
+```
+
+#### Install and Setup
 
 * Vagrant
 
@@ -18,7 +40,7 @@
 vagrant plugin install vagrant-vbguest --plugin-version 0.21
 ```
 
-### Commands
+#### Commands
 
 * Criar `Vagrantfile`
 
@@ -53,7 +75,7 @@ vagrant destory
 vagrant reload
 vagrant status
 ```
-### References
+#### References
 
 - https://www.vagrantup.com/
 

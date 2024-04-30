@@ -5,9 +5,8 @@
 * Plugin vbguest
 
 ```sh
-vagrant plugin install vagrant-vbquest
+vagrant plugin install vagrant-vbguest
 ```
-
 
 * Criar vagrant file
 

@@ -10,11 +10,17 @@
 docker swarm init --advertise-addr <IP_MANAGER>
 docker node ls
 ```
+
+```sh
+docker service create --name demo --publish 80:80 nginx
+docker service ls
+docker service ps demo
+docker servce scale demo=3
+```
 - Workers
 
 ```sh
 docker swarm join --token <TOKEN> <IP_MANAGER>
-docker swarm join --token SWMTKN-1-1agmlltn6n0r5gazu3stb199l631h8xqi13uv8u1msmw5nz5gd-8fvqijub9ski1zy8upl7i0uo6 192.168.56.10:2377
 ```
 
 ## Ansible

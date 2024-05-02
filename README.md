@@ -1,5 +1,26 @@
 # DevOps
 
+## Linux
+
+#### Commands
+
+```sh
+sed -i -e s#TAG_IN_FILE#abc# file
+```
+
+## Git Tag
+
+#### Commands
+
+```sh
+ git tag -a v1.1.0 -m "Release init"
+ git push origin v1.1.0
+ git describe --abbrev=0
+ export TAG=$(git describe --abbrev=0)
+```
+
+#### Install and Setup
+
 ## Docker Swarm
 
 #### Install and Setup
@@ -8,6 +29,7 @@
 
 ```sh
 docker swarm init --advertise-addr <IP_MANAGER>
+docker swarm join-token manager
 docker node ls
 ```
 
@@ -15,7 +37,7 @@ docker node ls
 docker service create --name demo --publish 80:80 nginx
 docker service ls
 docker service ps demo
-docker servce scale demo=3
+docker service scale demo=3
 ```
 - Workers
 
@@ -99,7 +121,6 @@ sudo ufw enable
 sudo ufw status
 ```
 192.168.56.2
-
 
 #### Install and Setup
 

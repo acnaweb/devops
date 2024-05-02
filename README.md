@@ -1,5 +1,9 @@
 # DevOps
 
+## Sonarqube
+
+#### Commands
+
 ## Linux
 
 #### Commands
@@ -68,6 +72,12 @@ db01
 
 ```sh
 ansible -m ping all
+```
+
+```sh
+ansible-galaxy install geerlingguy.mysql
+
+ansible-playbook playbook.yaml
 ```
 
 #### References

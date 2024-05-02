@@ -5,7 +5,7 @@
 #### Commands
 
 ```sh
-sed -i -e s#TAG_IN_FILE#abc# file
+sed -i -e s#TAG_IN_FILE#Mensagem# test.txt
 ```
 
 ## Git Tag

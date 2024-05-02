@@ -1,12 +1,46 @@
 # DevOps
 
+## Docker Swarm
+
+#### Install and Setup
+
+- Manager
+
+```sh
+docker swarm init --advertise-addr <IP_MANAGER>
+docker node ls
+```
+- Workers
+
+```sh
+docker swarm join --token <TOKEN> <IP_MANAGER>
+docker swarm join --token SWMTKN-1-1agmlltn6n0r5gazu3stb199l631h8xqi13uv8u1msmw5nz5gd-8fvqijub9ski1zy8upl7i0uo6 192.168.56.10:2377
+```
+
 ## Ansible
 
 #### Pre-req
 
 #### Install and Setup
 
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-22-04
+
 #### Commands
+
+- add hosts and groups
+> /etc/ansible/hosts
+
+```sh
+[apps]
+app01
+
+[dbs]
+db01
+```
+
+```sh
+ansible -m ping all
+```
 
 #### References
 
@@ -23,10 +57,43 @@
 * NFS Mount on Ubuntu
 
 - https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-22-04
+- https://www.tecmint.com/install-nfs-server-on-ubuntu/
+
+Install
 
 ```sh
 sudo apt install nfs-kernel-server
 ```
+
+Create an NFS Export Directory
+
+```sh
+sudo mkdir -p /mnt/nfs_share
+sudo chown -R nobody:nogroup /mnt/nfs_share/
+sudo chmod 777 /mnt/nfs_share/
+```
+
+Grant NFS Share Access to Client Systems
+
+```sh
+sudo vim /etc/exports
+/mnt/nfs_share  192.168.56.2/24(rw,sync,no_subtree_check)
+```
+
+```sh
+sudo exportfs -a
+sudo systemctl restart nfs-kernel-server
+```
+
+Allow NFS Access through the Firewall
+
+```sh
+sudo ufw allow from 192.168.56.2/24 to any port nfs
+sudo ufw enable
+sudo ufw status
+```
+192.168.56.2
+
 
 #### Install and Setup
 
@@ -67,6 +134,11 @@ echo "blacklist kvm-intel" >> /etc/modprobe.d/blacklist-local.conf
 echo "" >> /etc/modprobe.d/blacklist-local.conf
 ```
 
+> [!WARNING]
+> - mount.nfs: requested NFS version or transport protocol is not supported
+> - Check: https://github.com/hashicorp/vagrant/issues/7646
+> - https://github.com/hashicorp/vagrant/issues/9666
+
 ```sh
 vagrant ssh
 vagrant halt
@@ -74,6 +146,7 @@ vagrant suspend
 vagrant destory
 vagrant reload
 vagrant status
+vagrant provision
 ```
 #### References
 

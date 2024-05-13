@@ -49,41 +49,6 @@ docker service scale demo=3
 docker swarm join --token <TOKEN> <IP_MANAGER>
 ```
 
-## Ansible
-
-#### Pre-req
-
-#### Install and Setup
-
-https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-22-04
-
-#### Commands
-
-- add hosts and groups
-> /etc/ansible/hosts
-
-```sh
-[apps]
-app01
-
-[dbs]
-db01
-```
-
-```sh
-ansible -m ping all
-```
-
-```sh
-ansible-galaxy install geerlingguy.mysql
-
-ansible-playbook playbook.yaml
-```
-
-#### References
-
-- https://www.ansible.com/
-
 ## Vagrant
 
 #### Pre-req

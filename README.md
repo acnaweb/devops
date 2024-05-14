@@ -1,9 +1,5 @@
 # DevOps
 
-## Sonarqube
-
-#### Commands
-
 ## Linux
 
 #### Commands

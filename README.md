@@ -32,12 +32,14 @@ make
 
 ### Web
 
-> - [Jenkins](http://localhost:9001/)
+- [Jenkins](http://localhost:9001/)
+
 > [!NOTE] 
 > - Token 1 - Localizar o token no console ao final da instalação
 > - Token 2 - `cat /var/lib/jenkins/secrets/initialAdminPassword`
 
-> - [SonarQube](http://localhost:9000/)
+- [SonarQube](http://localhost:9000/)
+
 > - login: admin
 > - password: admin
 

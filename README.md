@@ -33,7 +33,7 @@ make
 ### Web
 
 > - [Jenkins](http://localhost:9001/)
-> - [!NOTE] 
+> [!NOTE] 
 > - Token 1 - Localizar o token no console ao final da instalação
 > - Token 2 - `cat /var/lib/jenkins/secrets/initialAdminPassword`
 

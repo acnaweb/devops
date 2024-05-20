@@ -1,0 +1,12 @@
+[submodule "jenkins"]
+	path = jenkins
+	url = https://github.com/acnaweb/jenkins.git
+[submodule "sonarqube"]
+	path = sonarqube
+	url = https://github.com/acnaweb/sonarqube.git
+[submodule "ansible"]
+	path = ansible
+	url = https://github.com/acnaweb/ansible.git
+[submodule "docker"]
+	path = docker
+	url = https://github.com/acnaweb/docker.git

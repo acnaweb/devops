@@ -34,7 +34,7 @@ make
 
 > - [Jenkins](http://localhost:9001/)
 > - [!Note] Token 1 - Localizar o token no console ao final da instalação
-> - [!Note] Token 2 - sudo systemctl status jenkins
+> - [!Note] Token 2 - `cat /var/lib/jenkins/secrets/initialAdminPassword`
 
 > - [SonarQube](http://localhost:9000/)
 > - login: admin

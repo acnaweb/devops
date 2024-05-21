@@ -25,6 +25,7 @@ vagrant plugin install vagrant-vbguest --plugin-version 0.21
 
 - Jenkins
 - SonarQube
+- Nexus
 
 ```sh
 make 
@@ -43,10 +44,7 @@ make
 > - login: admin
 > - password: admin
 
-### Integration
-
-
-
+- [Nexus](http://localhost:9002/)
 
 #### References
 

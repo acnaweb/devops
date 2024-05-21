@@ -4,7 +4,10 @@ up_sonarqube:
 up_jenkins:
 	cd ./jenkins/ && vagrant up; \
 
-up: up_sonarqube up_jenkins
+up_nexus:
+	cd ./nexus/ && vagrant up; \
+
+up: up_sonarqube up_jenkins up_nexus
 	echo "Running"
 	
 destroy_sonarqube:
@@ -13,9 +16,11 @@ destroy_sonarqube:
 destroy_jenkins:
 	cd ./jenkins/ && vagrant destroy -f; \
 
-destroy: destroy_sonarqube destroy_jenkins
-	echo "Destroyed"
+destroy_nexus:
+	cd ./nexus/ && vagrant destroy -f; \
 
+destroy: destroy_sonarqube destroy_jenkins destroy_nexus
+	echo "Destroyed"
 
 halt_sonarqube:
 	cd ./sonarqube/ && vagrant halt; \
@@ -23,5 +28,8 @@ halt_sonarqube:
 halt_jenkins:
 	cd ./jenkins/ && vagrant halt; \
 
-halt: halt_sonarqube halt_jenkins
+halt_nexus:
+	cd ./nexus/ && vagrant halt; \
+
+halt: halt_sonarqube halt_jenkins halt_nexus
 	echo "Halted"

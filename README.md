@@ -41,10 +41,17 @@ make
 
 - [SonarQube](http://localhost:9000/)
 
+> [!NOTE] 
 > - login: admin
 > - password: admin
 
 - [Nexus](http://localhost:9002/)
+
+> [!WARNING] 
+> - Token - `cat /opt/sonatype/sonatype-work/nexus3/admin.password `
+
+
+
 
 #### References
 

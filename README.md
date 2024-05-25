@@ -50,9 +50,6 @@ make
 > [!WARNING] 
 > - Token - `cat /opt/sonatype/sonatype-work/nexus3/admin.password `
 
-
-
-
 #### References
 
 - https://www.vagrantup.com/

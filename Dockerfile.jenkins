@@ -1,0 +1,37 @@
+FROM jenkins/jenkins:2.460-jdk17
+
+USER root
+
+RUN apt-get update \
+    && apt-get install -y lsb-release wget unzip \
+    && apt-get clean
+
+RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \
+  https://download.docker.com/linux/debian/gpg
+
+RUN echo "deb [arch=$(dpkg --print-architecture) \
+  signed-by=/usr/share/keyrings/docker-archive-keyring.asc] \
+  https://download.docker.com/linux/debian \
+  $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
+
+RUN apt-get update \
+    && apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin \
+    && apt-get clean \
+    && usermod -aG docker jenkins
+
+WORKDIR /opt
+
+ENV SONAR_RUNNER_HOME=/opt/sonar-scanner
+ENV SONAR_FILE=sonar-scanner-cli-5.0.1.3006-linux.zip
+ENV SONAR_FOLDER=/opt/sonar-scanner-5.0.1.3006-linux
+
+RUN wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/${SONAR_FILE} \
+    && unzip -o ${SONAR_FILE} -d /opt \
+    && mv ${SONAR_FOLDER} ${SONAR_RUNNER_HOME} \
+    && chown -R jenkins:jenkins ${SONAR_RUNNER_HOME} \
+    && ln -fs ${SONAR_RUNNER_HOME}/bin/sonar-scanner /usr/local/bin 
+        
+USER jenkins
+
+RUN jenkins-plugin-cli --plugins "docker-workflow:580.vc0c340686b_54 sonar:2.17.2"
+

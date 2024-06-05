@@ -7,7 +7,7 @@ up_jenkins:
 up_nexus:
 	cd ./nexus/ && vagrant up; \
 
-up: up_sonarqube up_jenkins up_nexus
+up: up_sonarqube up_jenkins 
 	echo "Running"
 	
 destroy_sonarqube:

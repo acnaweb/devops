@@ -1,0 +1,77 @@
+name: devops
+services:
+  jenkins:
+    build: 
+      dockerfile: Dockerfile.jenkins      
+    container_name: jenkins    
+    ports:
+      - 9001:8080
+      - 50000:50000
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    # networks:
+    #   - jenkins_network   
+
+  sonarqube:
+    image: sonarqube:9.9.5-community
+    container_name: sonarqube
+    ports:
+      - 9000:9000
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - sonar_data:/opt/sonarqube/data
+      - sonar_logs:/opt/sonarqube/logs
+      - sonar_extensions:/opt/sonarqube/extensions
+    # networks:
+    #   - jenkins_network 
+
+  nexus:
+    image: sonatype/nexus3:3.68.1-java11     
+    container_name: nexus
+    volumes:
+      - nexus_data:/nexus-data
+    ports:
+      - "9002:8081"
+      - "9003:9003"
+    restart: always 
+    # networks:
+    #   - jenkins_network   
+
+  # wait_services: 
+  #   image: jwilder/dockerize:0.6.1
+  #   container_name: wait_services
+  #   depends_on:
+  #     - jenkins
+  #   volumes:
+  #     - ./scripts/install_sonar_scanner.sh:/tmp/install_sonar_scanner.sh
+  #   command: >
+  #       dockerize -wait=tcp://jenkins:8080 -timeout 10s
+  #   networks:
+  #     - jenkins_network
+
+  # init:
+  #   image: ubuntu
+  #   container_name: init
+  #   depends_on:
+  #     - wait_services      
+  #   networks:
+  #     - jenkins_network
+  #   command: 
+  #       - /bin/bash
+  #       - -c
+  #       - | 
+  #         echo Agoora foi
+
+volumes:
+  jenkins_home:
+  sonar_data:
+  sonar_logs:
+  sonar_extensions:
+  nexus_data:
+
+networks:
+  jenkins_network:
+    driver: bridge

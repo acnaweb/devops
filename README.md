@@ -33,7 +33,7 @@
 | **Monitoramento e Observabilidade** | Acompanhar logs, métricas e alertas (Prometheus, Stackdriver). |
 | **Rollback Automático**             | Reverter para versão anterior em caso de falha.           |
 
-
+![](out/diagrams/tasks-ci-cd/tasks-ci-cd.png)
 
 
 ## Vagrant

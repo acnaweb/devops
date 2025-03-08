@@ -1,0 +1,20 @@
+@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title Component Diagram - Ansible
+footer Disponível em: https://github.com/acnaweb/devops
+
+Component(control, "control-node", "Control Node")
+Component(playbook, "playbook", "Control Node")
+
+Boundary(nodes, "Nodes", "Ansible Nodes") {
+    Component(node1, "Node 1")
+    Component(node2, "Node 2")
+}      
+Lay_R(control, nodes)
+
+Rel(control, node1, "Apply Playbooks")
+Rel(control, node2, "Manage")
+
+@enduml

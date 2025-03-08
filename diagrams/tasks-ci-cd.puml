@@ -1,0 +1,29 @@
+@startuml
+title Fluxo de CI/CD
+footer Disponível em: https://github.com/acnaweb/devops
+
+start
+:Controle de Versão (GitHub, GitLab);
+:Build da Aplicação;
+:Execução de Testes Unitários;
+:Análise Estática de Código;
+:Testes de Segurança;
+:Empacotamento da Aplicação;
+:Armazenamento de Artefatos;
+
+if (Entrega Contínua?) then (Sim)
+    :Testes de Integração;
+    :Testes de Aceitação Automatizados;
+    :Aprovação Manual? (se necessário);
+    :Deploy em Ambiente de Staging;
+endif
+
+if (Implantação Contínua?) then (Sim)
+    :Deploy Automatizado em Produção;
+    :Smoke Tests Pós-Deploy;
+    :Monitoramento e Observabilidade;
+    :Rollback Automático (se necessário);
+endif
+
+stop
+@enduml

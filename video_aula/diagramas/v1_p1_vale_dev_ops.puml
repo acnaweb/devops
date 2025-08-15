@@ -1,0 +1,9 @@
+@startuml
+title Vale entre Dev e Ops
+actor "Desenvolvimento" as Dev
+actor "Operações" as Ops
+Dev --> (Novas Funcionalidades Rápidas)
+Ops --> (Estabilidade Máxima)
+(Novas Funcionalidades Rápidas) -[#red]-> Ops : Conflito
+(Estabilidade Máxima) -[#red]-> Dev : Conflito
+@enduml

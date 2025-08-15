@@ -1,0 +1,6 @@
+@startuml
+title Benefícios do DevSecOps
+(Redução de Incidentes) --> (Maior Confiabilidade)
+(Maior Confiabilidade) --> (Confiança do Cliente)
+(Automação) --> (Evidências de Compliance)
+@enduml

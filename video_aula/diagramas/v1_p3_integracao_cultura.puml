@@ -1,0 +1,11 @@
+@startuml
+title Integração com DevOps
+actor Dev
+actor Ops
+rectangle "Cultura DevOps" {
+  Dev --> (Entrega Contínua)
+  Ops --> (Operações Automatizadas)
+}
+(Entrega Contínua) --> (Valor ao Cliente)
+(Operações Automatizadas) --> (Valor ao Cliente)
+@enduml

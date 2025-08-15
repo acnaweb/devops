@@ -1,0 +1,6 @@
+@startuml
+title Por que Adotar Práticas DevOps
+(Velocidade de Mercado) --> (Automação)
+(Erros Frequentes) --> (Padronização)
+(Silos) --> (Colaboração)
+@enduml

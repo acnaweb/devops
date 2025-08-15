@@ -1,0 +1,47 @@
+@startuml
+title SoftWeb - Vale entre Dev e Ops (Contexto e Desafios)
+
+actor "Diretoria" as Board
+actor "Gerente (Alberto)" as Manager
+actor "Time de Desenvolvimento" as Dev
+actor "Time de Operações (Sysadmins)" as Ops
+
+rectangle "Metas Estratégicas" as Goals {
+  ( +35% Funcionalidades )
+  ( Atualizar 25% do Produto )
+  ( Disponibilidade 99% )
+}
+
+Board --> Manager : Define metas anuais
+Manager --> Goals : Transmite objetivos
+Manager --> Dev : "Mais features e novas tecnologias"
+Manager --> Ops : "Elevar disponibilidade e bloquear mudanças arriscadas"
+
+Dev --> (Aumento de Mudanças/Deploys)
+Ops --> (Redução de Mudanças/Janela de Mudança)
+
+(Aumento de Mudanças/Deploys) -[#red]-> Ops : risco percebido
+(Redução de Mudanças/Janela de Mudança) -[#red]-> Dev : atrito
+
+cloud "Mercado Competitivo" as Market
+Market --> Dev : Pressão por inovação
+Market --> Ops : Pressão por estabilidade
+
+rectangle "Consequências" as Conseq {
+  (Silos e Handoffs)
+  (Retrabalho e Atrasos)
+  (Entregas Arriscadas)
+}
+
+(Aumento de Mudanças/Deploys) --> Conseq
+(Redução de Mudanças/Janela de Mudança) --> Conseq
+
+rectangle "Próxima Etapa" as Next {
+  (Cultura DevOps)
+  (Objetivos Compartilhados)
+  (Automação e Métricas)
+}
+
+Conseq --> Next : Ponte sobre o "vale" Dev x Ops
+
+@enduml

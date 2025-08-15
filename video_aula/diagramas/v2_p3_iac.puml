@@ -1,0 +1,6 @@
+@startuml
+title Infraestrutura como Código
+(Definir Infraestrutura) --> (Código Versionado)
+(Código Versionado) --> (Provisionamento Automático)
+(Provisionamento Automático) --> (Ambientes Padronizados)
+@enduml

@@ -1,0 +1,5 @@
+@startuml
+title Estágio Teste
+(Artefato Pronto) --> (Testes Automatizados)
+(Testes Automatizados) --> (Relatório de Qualidade)
+@enduml

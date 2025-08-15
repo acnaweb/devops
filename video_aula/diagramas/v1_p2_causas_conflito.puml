@@ -1,0 +1,7 @@
+@startuml
+title Causas do Conflito
+(Objetivos Distintos) --> (Conflito)
+(Falta de Integração) --> (Conflito)
+(Comunicação Limitada) --> (Conflito)
+(Barreiras Culturais) --> (Conflito)
+@enduml

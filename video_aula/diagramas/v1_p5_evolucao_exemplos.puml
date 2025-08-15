@@ -1,0 +1,6 @@
+@startuml
+title Evolução com DevOps
+(Organização Tradicional) --> (Deploy Mensal)
+(Organização com DevOps) --> (Deploy Diário)
+(Deploy Diário) --> (Feedback Rápido)
+@enduml

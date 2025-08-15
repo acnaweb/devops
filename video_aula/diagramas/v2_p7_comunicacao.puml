@@ -1,0 +1,7 @@
+@startuml
+title Comunicação no DevOps
+(Dev) --> (Ferramenta de Colaboração)
+(Ops) --> (Ferramenta de Colaboração)
+(Sec) --> (Ferramenta de Colaboração)
+(Ferramenta de Colaboração) --> (Alinhamento)
+@enduml

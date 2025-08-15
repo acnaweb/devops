@@ -1,0 +1,7 @@
+@startuml
+title Microsserviços no DevOps
+(Microserviço A) --> (API Gateway)
+(Microserviço B) --> (API Gateway)
+(Microserviço C) --> (API Gateway)
+(API Gateway) --> (Usuários)
+@enduml

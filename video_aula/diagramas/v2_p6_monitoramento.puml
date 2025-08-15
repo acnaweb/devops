@@ -1,0 +1,7 @@
+@startuml
+title Monitoramento e Observabilidade
+(Sistema) --> (Geração de Logs)
+(Geração de Logs) --> (Indexação e Análise)
+(Indexação e Análise) --> (Alertas)
+(Alertas) --> (Resposta)
+@enduml

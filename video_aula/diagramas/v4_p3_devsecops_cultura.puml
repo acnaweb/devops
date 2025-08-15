@@ -1,0 +1,7 @@
+@startuml
+title Cultura DevSecOps
+(Planejar) --> (Verificação de Segurança)
+(Codificar) --> (Análise de Vulnerabilidades)
+(Testar) --> (Validação de Segurança)
+(Implantar) --> (Monitoramento Contínuo)
+@enduml

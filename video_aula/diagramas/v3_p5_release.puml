@@ -1,0 +1,5 @@
+@startuml
+title Estágio Lançamento
+(Testes Aprovados) --> (Pipeline de Release)
+(Pipeline de Release) --> (Versão Disponível)
+@enduml

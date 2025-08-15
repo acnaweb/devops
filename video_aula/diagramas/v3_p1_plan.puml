@@ -1,0 +1,6 @@
+@startuml
+title Estágio Planejamento
+(Stakeholders) --> (Definição de Requisitos)
+(Definição de Requisitos) --> (Backlog Priorizado)
+(Backlog Priorizado) --> (Plano de Entrega)
+@enduml

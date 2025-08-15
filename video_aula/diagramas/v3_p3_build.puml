@@ -1,0 +1,5 @@
+@startuml
+title Estágio Build
+(Código) --> (Ferramenta de Build)
+(Ferramenta de Build) --> (Artefato Pronto)
+@enduml

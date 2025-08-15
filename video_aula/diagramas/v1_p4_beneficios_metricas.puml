@@ -1,0 +1,8 @@
+@startuml
+title Benefícios e Métricas
+(Velocidade) --> (Mais Releases)
+(Escalabilidade) --> (Atendimento à Demanda)
+(Confiabilidade) --> (Menos Incidentes)
+(Segurança) --> (Proteção de Dados)
+(Métricas) --> (Melhoria Contínua)
+@enduml

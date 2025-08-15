@@ -1,0 +1,5 @@
+@startuml
+title Estágio Monitoração
+(Sistema) --> (Coleta de Métricas)
+(Coleta de Métricas) --> (Análise e Alertas)
+@enduml

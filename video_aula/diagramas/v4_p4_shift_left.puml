@@ -1,0 +1,5 @@
+@startuml
+title Shifting Security Left
+(Etapas Iniciais) --> (Identificação de Vulnerabilidades)
+(Identificação de Vulnerabilidades) --> (Correção Antecipada)
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+title Pipeline CI/CD
+(Commit) --> (Build Automático)
+(Build Automático) --> (Testes Automatizados)
+(Testes Automatizados) --> (Pacote Pronto)
+@enduml

@@ -1,0 +1,5 @@
+@startuml
+title Estágio Operação
+(Sistema em Produção) --> (Monitoração de Saúde)
+(Monitoração de Saúde) --> (Ajustes Automáticos)
+@enduml

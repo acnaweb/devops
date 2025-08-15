@@ -1,0 +1,6 @@
+@startuml
+title Riscos da Segurança Tardia
+(Sistema em Produção) --> (Exploração de Vulnerabilidades)
+(Exploração de Vulnerabilidades) --> (Danos Financeiros)
+(Exploração de Vulnerabilidades) --> (Danos à Reputação)
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+title Gargalos sem Práticas DevOps
+(Infraestrutura Manual) --> (Demora no Provisionamento)
+(Testes Tardios) --> (Bugs em Produção)
+(Deploy Manual) --> (Risco de Falhas)
+@enduml

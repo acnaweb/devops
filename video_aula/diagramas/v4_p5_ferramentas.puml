@@ -1,0 +1,6 @@
+@startuml
+title Ferramentas de DevSecOps
+(Análise Estática) --> (Detecção no Código)
+(Análise Dinâmica) --> (Validação em Runtime)
+(Gestão de Acessos) --> (Princípio do Menor Privilégio)
+@enduml
